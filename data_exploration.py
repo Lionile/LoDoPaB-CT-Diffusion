@@ -65,13 +65,12 @@ plt.suptitle('output')
 for i in range(4):
     ax[0, i].imshow(y[i], cmap='gray')
 for i in range(4):
-    ax[1, i].imshow(y_fbp[i], cmap='gray')
+    ax[1, i].imshow(x_fbp[i], cmap='gray')
 
 
 fig, ax = plt.subplots(1, 4, figsize=(15, 6))
 plt.suptitle('difference')
-print(f'diff:\n{y[i] - y_fbp[i]}')
 for i in range(4):
-    ax[i].imshow(abs(y[i] - y_fbp[i]), cmap='gray')
+    ax[i].imshow(abs(y[i] - x_fbp[i]), cmap='gray')
 
 plt.show()
